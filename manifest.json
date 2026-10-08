@@ -1,0 +1,11 @@
+{
+  "name": "小雨天气",
+  "short_name": "小雨天气",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f6f6",
+  "theme_color": "#f6f6f6",
+  "icons": [
+    {"src": "https://raw.githubusercontent.com/5pgyygnr92-glitch/tt/main/icons/A802E9E7-5214-415A-9D39-BE4C5A63C0D6.jpeg", "sizes": "512x512", "type": "image/jpeg", "purpose": "any"}
+  ]
+}
