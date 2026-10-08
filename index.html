@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#14110f">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#f6f6f6">
 <title>Atelier</title>
 <style>
 :root{--sat:env(safe-area-inset-top,0px);--sab:env(safe-area-inset-bottom,0px);
@@ -166,6 +166,58 @@ h1.glass.t{width:auto;height:auto;padding:9px 18px;border-radius:99px;font-size:
 .cr em{white-space:nowrap}
 #home,.win,.sheet{inset:0 0 auto 0;height:100vh;height:100lvh}
 html,body{min-height:100vh;min-height:100lvh}
+.dw{position:relative;overflow:hidden;border-radius:14px;margin-bottom:2px}
+.dd{position:absolute;right:0;top:0;bottom:0;width:80px;background:#b3392b;color:#fff;font-size:14px;font-weight:600}
+.dwi{position:relative;background:var(--cream);transition:transform .25s cubic-bezier(.2,.9,.25,1);touch-action:pan-y}
+.mt{font-size:11px;color:var(--sub);margin-left:8px;flex:none;font-weight:400}
+.mc{display:block;width:100%}.mc b{font-size:15px}.mc small{display:block;font-size:12.5px;color:var(--sub);margin-top:3px;line-height:1.5}
+#vf{flex:1;margin:0 12px;border:1px solid var(--line);border-radius:18px;background:#fff;min-height:0}
+.act{display:flex;gap:2px;margin:-4px 0 0 -8px}
+.act button{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:var(--sub)}
+.act button:active{background:rgba(0,0,0,.07)}.act svg{width:18px;height:18px}
+.hrt{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--accent);flex:none;align-self:flex-end}
+.hrt svg{width:25px;height:25px;fill:none;transition:fill .2s}.hrt[disabled]{opacity:.35}
+.hrt.on svg{fill:var(--accent);animation:hb 1s infinite}@keyframes hb{50%{transform:scale(1.18)}}
+.cb{-webkit-touch-callout:none}
+/* ===== 灰白极简风格 ===== */
+:root{--cream:#f6f6f6;--ink:#2b2b2b;--sub:#9b9b9b;--line:#e9e9e9;--accent:#2b2b2b;--card:#efefef;--serif:var(--font)}
+html,body{background:#f6f6f6}
+#home{background:#f4f4f4;color:#2b2b2b}#home.dk{color:#fff}
+.clock b{font-weight:300;letter-spacing:-3px}.app{font-size:11px;letter-spacing:.5px}
+.ic.gl,.crd .ic.gl{background:#ececec;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.ic svg{stroke:#3a3a3a}.ic svg [fill="#fff"]{fill:#3a3a3a}
+.dock{background:rgba(236,236,236,.88);border:0}
+.win{background:var(--cream)}#w-arc,#w-wb,#w-card{background:var(--cream)!important}
+.hd h1{font-family:var(--font);font-weight:700;font-size:18px;display:flex;flex-direction:column;align-items:center;line-height:1.15}
+.hd h1[data-en]::after{content:attr(data-en);font-size:9px;letter-spacing:2.5px;color:var(--sub);font-weight:500;margin-top:3px}
+.ib{background:#ececec;border-radius:50%}span.ib{background:none}.ib:active{background:#e0e0e0}
+.glass{background:#ececec;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:0;box-shadow:none}
+h1.glass.t{font-weight:700;letter-spacing:.5px}
+.form h2,.empty h2{font-weight:700;letter-spacing:-.5px}.form h2{font-size:34px}
+label{font-size:11px;letter-spacing:2px;font-weight:500;color:#a3a3a3}
+.in{border:0;background:var(--card);border-radius:22px}.in:focus{border:0;box-shadow:0 0 0 2px #dcdcdc}
+.btn{border-radius:99px}.btn.ghost{background:#ececec;border:0}.btn.full{background:var(--ink)}
+.chip{border:0;background:#ececec}.chip.sel{background:var(--ink)}
+.sug button{border:0;background:var(--card);border-radius:20px}
+.m.u .t{background:#ececec;border-radius:22px 22px 6px 22px}.m.a .t code{background:#ececec}
+.file{background:var(--card);border:0;box-shadow:none;border-radius:22px}
+.fi{background:#e3e3e3;color:var(--ink)}.arc{background:#e3e3e3;border:0}
+.box{background:var(--card);border:0;box-shadow:none}
+.rb,.pill,.ac,.af{background:#e4e4e4}.rb:active,.pill:active{background:#d9d9d9}
+.sp{background:var(--cream);border-radius:32px 32px 0 0}.dp{background:var(--cream)}
+.di.home{border:0}.crd{border:0;border-radius:24px;background:var(--card)}
+.tb{background:rgba(246,246,246,.92);border-top:1px solid var(--line)}
+.tb button{font-size:10px;letter-spacing:1.5px;font-weight:500}.tb button.on{color:var(--ink)}
+#cbody,#abody,#wbody{padding:6px 20px 20px}
+.cr{background:var(--card);border:0;margin-bottom:3px;border-radius:8px;padding:15px 16px}.cr:active{background:#e6e6e6}
+.cr:first-of-type{border-radius:26px 26px 8px 8px}.cr:last-of-type{border-radius:8px 8px 26px 26px}.cr:only-of-type{border-radius:26px}
+.cr .cur{color:var(--ink)}
+.avt,.avt.big,.cm .avt{border-radius:50%}
+.sub{background:var(--cream)}.sh{background:rgba(246,246,246,.92);border-bottom:0}
+.cin{background:var(--cream);border-top:0}.cin textarea{background:#ececec;border-radius:22px;padding:11px 16px}
+.csb{background:var(--ink);border-radius:99px}
+.cb{background:var(--card);border-radius:20px 20px 20px 6px}
+.cm.u .cb{background:var(--ink);color:#fff;border-radius:20px 20px 6px 20px}
 </style>
 </head>
 <body>
@@ -173,12 +225,11 @@ html,body{min-height:100vh;min-height:100lvh}
 <div id="home">
     <div class="clock"><b id="ck">09:41</b><span id="dt"></span></div>
   <div class="grid" id="grid"></div>
-  <div class="dock" id="dock"></div>
 </div>
 
 <!-- API app -->
 <section class="win" id="w-api">
-  <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1>API 设置</h1><span class="ib"></span></div>
+  <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1 data-en="API">API 设置</h1><span class="ib"></span></div>
   <div class="scroll"><div class="form">
     <h2>连接模型</h2><p class="d">填写接口地址与密钥，拉取可用模型并保存。数据只存在本机浏览器。</p>
     <label>API 地址</label><input class="in" id="url" placeholder="https://api.example.com/v1" inputmode="url" autocapitalize="off" autocorrect="off">
@@ -192,7 +243,7 @@ html,body{min-height:100vh;min-height:100lvh}
 
 <!-- Chat app -->
 <section class="win ov" id="w-chat">
-  <div class="hd"><button class="glass" id="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><h1 class="glass t">人设工坊</h1>
+  <div class="hd"><button class="glass" id="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><h1 class="glass t" id="ttl">人设工坊</h1>
   <button class="glass" id="newc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div>
   <div class="scroll" id="sc"><div id="msgs"></div></div>
   <div class="compose"><div class="box">
@@ -206,22 +257,22 @@ html,body{min-height:100vh;min-height:100lvh}
       <button class="send" id="go" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
     </div>
   </div></div>
-  <input type="file" id="file" accept="image/*,.txt,.md,.json,.csv,.docx" multiple hidden>
+  <input type="file" id="file" accept="image/*,.txt,.md,.json,.csv,.docx,.html,.htm,.css,.js,.xml" multiple hidden>
 </section>
 
 <section class="win" id="w-look">
-  <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1>外观</h1><span class="ib"></span></div>
+  <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1 data-en="APPEARANCE">外观</h1><span class="ib"></span></div>
   <div class="scroll"><div class="form" id="look"></div></div>
 </section>
 
 <div class="sheet" id="sheet"><div class="sp">
   <div class="hd"><button class="ib" id="sx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><h1 id="sn" style="font-size:16px;font-family:var(--font);font-weight:600"></h1><span class="ib"></span></div>
   <pre id="sb"></pre>
-  <div class="acts"><button class="btn ghost" id="cp">复制</button><button class="btn" id="dl">保存 .txt</button><button class="btn ghost" id="arcb">存档</button><button class="btn" id="imp" style="background:var(--accent)">导入测卡</button></div>
+  <div class="acts"><button class="btn ghost" id="cp">复制</button><button class="btn" id="dl">保存 .txt</button><button class="btn ghost" id="arcb">存档</button><button class="btn" id="imp" style="background:var(--accent)">导入测卡</button><button class="btn" id="impw" style="background:var(--accent)">导入世界书</button></div>
 </div></div>
 <section class="win" id="w-card">
   <div id="cmain" style="display:flex;flex-direction:column;flex:1;min-height:0">
-    <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1 id="ctitle">消息</h1><button class="ib" id="cadd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div>
+    <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1 id="ctitle" data-en="CHATS">消息</h1><button class="ib" id="cadd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div>
     <div class="scroll" id="cbody"></div>
     <div class="tb" id="ctabs">
       <button data-t="msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12z"/></svg>消息</button>
@@ -233,17 +284,17 @@ html,body{min-height:100vh;min-height:100lvh}
     <div class="sh"><button class="ib" id="cback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><div style="text-align:center"><div id="cname" style="font-weight:600;font-size:16px"></div><div id="cstat" style="font-size:11px;color:var(--sub);height:14px"></div></div>
       <button class="ib" id="cmore"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/></svg></button></div>
     <div class="scroll" id="cscroll"><div id="cmsgs" style="padding:4px 14px 14px"></div></div>
-    <div class="cin"><textarea id="cin" rows="1" placeholder="和角色聊聊，测试人设…"></textarea><button class="csb" id="csend" disabled>发送</button></div>
+    <div class="cin"><textarea id="cin" rows="1" placeholder="发消息，点 ♡ 让对方回复"></textarea><button class="hrt" id="cheart" disabled aria-label="生成回复"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button><button class="csb" id="csend" disabled>发送</button></div>
   </div>
 </section>
 
 <section class="win" id="w-arc" style="background:#f2f1ee">
-  <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1>存档</h1><span class="ib"></span></div>
+  <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1 data-en="ARCHIVE">存档</h1><span class="ib"></span></div>
   <div class="scroll" id="abody"></div>
 </section>
 
 <section class="win" id="w-wb" style="background:#f2f1ee">
-  <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1>世界书</h1><button class="ib" id="wadd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div>
+  <div class="hd"><button class="ib" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><h1 data-en="WORLD BOOKS">世界书</h1><button class="ib" id="wadd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div>
   <div class="scroll" id="wbody"></div>
 </section>
 
@@ -273,6 +324,13 @@ html,body{min-height:100vh;min-height:100lvh}
   <div style="padding:0 16px 8px"><input class="in" id="mq" placeholder="搜索模型" style="padding:12px 14px"></div>
   <div id="plist" style="overflow:auto;padding:0 14px calc(var(--sab) + 18px);flex:1"></div>
 </div></div>
+<div class="sheet" id="vsheet"><div class="sp">
+  <div class="hd"><button class="ib" id="vx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><h1 id="vn" style="font-size:16px;font-family:var(--font);font-weight:600"></h1><span class="ib"></span></div>
+  <div class="row" style="padding:0 16px 10px"><button class="chip sel" data-v="pv">预览</button><button class="chip" data-v="src">源码</button></div>
+  <iframe id="vf" sandbox="allow-scripts"></iframe><pre id="vsrc" style="display:none"></pre>
+  <div class="acts"><button class="btn ghost" id="vcp">复制代码</button><button class="btn" id="vdl">保存 .html</button><button class="btn ghost" id="varc">存档</button></div>
+</div></div>
+<div class="sheet" id="rsheet"><div class="sp" style="height:auto"><div class="hd"><span class="ib"></span><h1 style="font-size:16px;font-family:var(--font);font-weight:600">消息操作</h1><span class="ib"></span></div><div style="padding:4px 14px calc(var(--sab) + 18px)"><div class="di" id="rregen"><span>重新生成这轮回复</span></div><div class="di" id="rcopy"><span>复制这条消息</span></div></div></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -281,6 +339,9 @@ const load=(k,d)=>{try{return JSON.parse(LS.getItem(k))??d}catch{return d}};
 let cfg=load('cfg',{url:'',key:'',model:'',temp:.8}),hist=[],busy=false,curDoc=null;
 const ICON_FILE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>';
 const SPARK='<svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg>';
+const SVG1='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">';
+const CHK=SVG1+'<path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+const ACT=(i,last)=>`<div class="act"><button data-cp="${i}" aria-label="复制">${SVG1}<rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A2.5 2.5 0 0 1 7.5 4H15"/></svg></button>${last?`<button data-rt="1" aria-label="重新生成">${SVG1}<path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></button>`:''}</div>`;
 const SYS=`你是一位专业的角色人设(人物设定)策划搭档。用户会和你讨论角色，你负责提问、完善细节、提出建议，并在合适时撰写完整人设。
 规则：
 1. 讨论阶段用自然、简洁的对话回复，每次最多问1-2个关键问题。
@@ -290,6 +351,27 @@ const SYS=`你是一位专业的角色人设(人物设定)策划搭档。用户�
 </txt>
 3. 文档建议包含：基本信息、外貌、性格、背景经历、说话方式与口癖、人际关系、喜好与禁忌、示例台词。可按需增减。
 4. 修改已有人设时，输出修改后的完整文档，而不是只给片段。`;
+const CODE_RULE=`把完整代码放进如下标签（标签外只写一两句说明）。代码必须是单个自包含的 HTML 文件：内联 CSS/JS，不依赖外部资源，并带上能演示效果的示例内容；修改时输出完整代码而不是片段：
+<code name="名称.html">
+完整代码
+</code>
+你回复后系统会自动弹出界面预览。`;
+const SYSM={persona:SYS,
+wb:`你是一位专业的世界书(世界观设定)策划搭档。用户要和你构建世界观：地理、势力、历史、规则、力量/科技体系、重要地点与人物、术语词条等。你负责提问、保证设定自洽，并在合适时撰写完整世界书。
+规则：
+1. 讨论阶段自然简洁，每次最多问1-2个关键问题。
+2. 用户要求写出/整理/修改世界书时，把完整文档放进如下标签，标签外只写一两句说明：
+<txt name="世界书名-世界书.txt">
+正文
+</txt>
+3. 建议按条目组织（【条目名】+内容），方便角色引用；可按需增减。
+4. 修改时输出修改后的完整文档。`,
+look:`你是一位前端美化搭档。用户会导入聊天界面的源代码，并说明美化需求（配色、气泡、字体、动效、布局等）。若还没有源代码或需求不明确，先简短询问。保持原有功能与结构，只改视觉表现。\n${CODE_RULE}`,
+voice:`你是一位「心声」功能的前端搭档。心声指聊天界面里展示角色内心独白/想法的功能（气泡、面板、浮层等）。用户会导入心声相关的源代码并说明需求。若还没有源代码或需求不明确，先简短询问。保持原有数据结构与功能，按需求修改或新增。\n${CODE_RULE}`};
+const MODES={persona:{n:'人设',t:'人设工坊',nm:'人设搭档',d:'讨论并撰写角色人设',h:'今天想聊哪位角色？',p:'和我讨论设定，我会帮你打磨细节，<br>并把完整人设整理成 txt 文档。',s:['我想创作一个新角色，帮我从头构思','帮我把一段零散设定整理成完整人设','给我的角色设计说话方式和口癖']},
+wb:{n:'世界书',t:'世界书工坊',nm:'世界书搭档',d:'构建世界观与背景设定',h:'想构建怎样的世界？',p:'和我聊聊世界观，我会帮你梳理条目，<br>整理成可导入的世界书。',s:['我想从头构思一个世界观','帮我把零散设定整理成世界书条目','检查我的世界观有没有矛盾']},
+look:{n:'美化',t:'美化工坊',nm:'美化搭档',d:'导入源码，定制界面样式',code:1,h:'想把界面改成什么样？',p:'先导入源代码，再告诉我需求，<br>完成后会自动弹出界面预览。',s:['我想换一套新的配色和气泡样式','帮我给界面加上细腻的动效']},
+voice:{n:'心声',t:'心声工坊',nm:'心声搭档',d:'导入源码，制作角色心声',code:1,h:'想做怎样的心声？',p:'先导入心声的源代码，再告诉我需求，<br>完成后会自动弹出界面预览。',s:['帮我设计一个心声展示样式','给心声加上展开/收起效果']}};
 
 /* home */
 function tick(){const d=new Date(),p=n=>String(n).padStart(2,'0');
@@ -331,24 +413,25 @@ $('#save').onclick=()=>{
 /* chat */
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function md(s){return s.split(/\n{2,}/).filter(x=>x.trim()).map(p=>'<p>'+esc(p).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/`(.+?)`/g,'<code>$1</code>').replace(/\n/g,'<br>')+'</p>').join('')}
-function parse(t){const parts=[],re=/<txt\s+name="([^"]*)">([\s\S]*?)(?:<\/txt>|$)/g;let i=0,m;
-  while((m=re.exec(t))){if(m.index>i)parts.push({t:t.slice(i,m.index)});parts.push({n:m[1]||'文档.txt',c:m[2].trim()});i=re.lastIndex}
+function parse(t){const parts=[],re=/<(txt|code)\s+name="([^"]*)">([\s\S]*?)(?:<\/\1>|$)/g;let i=0,m;
+  while((m=re.exec(t))){if(m.index>i)parts.push({t:t.slice(i,m.index)});const k=m[1];parts.push({k,n:m[2]||(k==='code'?'美化.html':'文档.txt'),c:(k==='code'?m[3].replace(/^\s*```\w*\n?|\n?```\s*$/g,''):m[3]).trim()});i=re.lastIndex}
   if(i<t.length)parts.push({t:t.slice(i)});return parts}
-function render(){const box=$('#msgs');
-  if(!hist.length){box.innerHTML=`<div class="empty">${SPARK}<h2>今天想聊哪位角色？</h2><p>和我讨论设定，我会帮你打磨细节，<br>并把完整人设整理成 txt 文档。</p>
-  <div class="sug"><button>我想创作一个新角色，帮我从头构思</button><button>帮我把一段零散设定整理成完整人设</button><button>给我的角色设计说话方式和口癖</button></div></div>`;
-    box.querySelectorAll('.sug button').forEach(b=>b.onclick=()=>send(b.textContent));return}
-  box.innerHTML='';hist.forEach(m=>{const d=document.createElement('div');
+function render(){const box=$('#msgs'),M=MODES[conv&&conv.mode];$('#ttl').textContent=M?M.t:'新对话';
+  if(!hist.length){if(!M){box.innerHTML=`<div class="empty">${SPARK}<h2>这次想做什么？</h2><p>选好方向，我会按对应的方式协助你。</p><div class="sug">${Object.entries(MODES).map(([k,v])=>`<button class="mc" data-mode="${k}"><b>${v.n}</b><small>${v.d}</small></button>`).join('')}</div></div>`;
+      box.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>pickMode(b.dataset.mode));return}
+    box.innerHTML=`<div class="empty">${SPARK}<h2>${M.h}</h2><p>${M.p}</p><div class="sug">${M.code?'<button data-imp="1">导入源代码文件</button>':''}${M.s.map(x=>`<button>${x}</button>`).join('')}</div></div>`;
+    box.querySelectorAll('.sug button').forEach(b=>b.onclick=()=>b.dataset.imp?$('#file').click():send(b.textContent));return}
+  box.innerHTML='';hist.forEach((m,i)=>{const d=document.createElement('div');
     if(m.role==='user'){d.className='m u';const at=(m.att||[]).map(a=>a.k==='img'&&a.url?`<img class="ai" src="${a.url}">`:`<span class="af">${esc(a.n)}</span>`).join('');
       d.innerHTML='<div class="uw">'+(at?'<div class="ats">'+at+'</div>':'')+(m.content?'<div class="t">'+esc(m.content)+'</div>':'')+'</div>'}
-    else{d.className='m a';d.innerHTML='<div class="nm">'+SPARK+'人设搭档</div><div class="t"></div>';const t=d.lastChild;
+    else{d.className='m a';d.innerHTML='<div class="nm">'+SPARK+(M?M.nm:'人设搭档')+'</div><div class="t"></div>';const t=d.lastChild;
       parse(m.content).forEach(p=>{if(p.t){t.insertAdjacentHTML('beforeend',md(p.t))}else{
         const f=document.createElement('div');f.className='file';
-        f.innerHTML=`<div class="fi">${ICON_FILE}</div><div style="flex:1;min-width:0"><div class="fn">${esc(p.n)}</div><div class="fs">${p.c.length} 字 · 点击查看</div></div><div class="fa"><span class="arc">存档</span><span class="imp">导入测卡</span></div>`;
-        f.onclick=e=>{if(e.target.closest('.imp'))importCard(p);else if(e.target.closest('.arc'))archiveDoc(p);else showDoc(p)};t.appendChild(f)}})}
+        f.innerHTML=`<div class="fi">${ICON_FILE}</div><div style="flex:1;min-width:0"><div class="fn">${esc(p.n)}</div><div class="fs">${p.c.length} 字 · ${p.k==='code'?'点击预览':'点击查看'}</div></div><div class="fa"><span class="arc">存档</span><span class="imp">${p.k==='code'?'预览':conv&&conv.mode==='wb'?'导入世界书':'导入测卡'}</span></div>`;
+        f.onclick=e=>{if(e.target.closest('.imp'))p.k==='code'?showPreview(p):conv&&conv.mode==='wb'?importWb(p):importCard(p);else if(e.target.closest('.arc'))archiveDoc(p);else p.k==='code'?showPreview(p):showDoc(p)};t.appendChild(f)}});d.insertAdjacentHTML('beforeend',ACT(i,i===hist.length-1))}
     box.appendChild(d)});scrollDown()}
 function scrollDown(){requestAnimationFrame(()=>{const s=$('#sc');s.scrollTop=s.scrollHeight})}
-function showDoc(p){curDoc=p;$('#arcb').textContent=p.aid?'删除存档':'存档';$('#sn').textContent=p.n;$('#sb').textContent=p.c;$('#sheet').classList.add('on')}
+function showDoc(p){if(/\.html?$/i.test(p.n))return showPreview(p);curDoc=p;$('#arcb').textContent=p.aid?'删除存档':'存档';$('#sn').textContent=p.n;$('#sb').textContent=p.c;$('#sheet').classList.add('on')}
 $('#sx').onclick=()=>$('#sheet').classList.remove('on');
 $('#sheet').onclick=e=>{if(e.target.id==='sheet')$('#sheet').classList.remove('on')};
 $('#cp').onclick=async()=>{try{await navigator.clipboard.writeText(curDoc.c);toast('已复制')}catch{toast('复制失败，请长按文字手动复制')}};
@@ -357,30 +440,39 @@ $('#dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjec
 const inp=$('#inp');
 inp.oninput=()=>{inp.style.height='auto';inp.style.height=Math.min(inp.scrollHeight,140)+'px';refreshGo()};
 $('#go').onclick=()=>send(inp.value.trim());
-$('#newc').onclick=()=>{if(!hist.length)return toast('已经是新对话了');conv=null;hist=[];LS.removeItem('cur');render()};
+$('#newc').onclick=()=>{if(!conv||(!hist.length&&!conv.mode))return toast('已经是新对话了');if(!hist.length)convs=convs.filter(c=>c!==conv);conv=null;hist=[];LS.removeItem('cur');saveHist();render()};
 async function send(text){
   text=(text||'').trim();if((!text&&!pending.length)||busy)return;
   if(!cfg.url||!cfg.key||!cfg.model){toast('请先在 API 设置中保存配置');return open('api')}
+  if(!conv||!conv.mode)return toast('请先选择这次要做什么');
   const att=pending.slice();pending=[];renderAtt();
-  if(!conv)newConv();const tgt=conv;if(!tgt.title||tgt.title==='新对话')tgt.title=(text||'附件').slice(0,24);
-  tgt.msgs.push({role:'user',content:text,att});inp.value='';inp.style.height='auto';busy=true;refreshGo();render();
-  const box=$('#msgs'),ld=document.createElement('div');ld.className='m a';ld.innerHTML='<div class="nm">'+SPARK+'人设搭档</div><div class="dots"><i></i><i></i><i></i></div>';box.appendChild(ld);scrollDown();
+  const tgt=conv;if(!tgt.title||tgt.title==='新对话')tgt.title=(text||'附件').slice(0,24);
+  tgt.msgs.push({role:'user',content:text,att});inp.value='';inp.style.height='auto';busy=true;refreshGo();render();gen(tgt)}
+async function gen(tgt){
+  const box=$('#msgs'),ld=document.createElement('div');ld.className='m a';ld.innerHTML='<div class="nm">'+SPARK+(MODES[tgt.mode]||MODES.persona).nm+'</div><div class="dots"><i></i><i></i><i></i></div>';box.appendChild(ld);scrollDown();
   try{const r=await fetch(cfg.url+'/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+cfg.key},
-      body:JSON.stringify({model:cfg.model,messages:[{role:'system',content:SYS},...tgt.msgs.slice(-30).map(toApi)]})});
+      body:JSON.stringify({model:cfg.model,messages:[{role:'system',content:SYSM[tgt.mode]||SYS},...tgt.msgs.slice(-30).map(toApi)]})});
     if(!r.ok)throw new Error('HTTP '+r.status+' '+(await r.text()).slice(0,120));
     const j=await r.json();tgt.msgs.push({role:'assistant',content:j.choices?.[0]?.message?.content||'（空回复）'});
   }catch(e){tgt.msgs.push({role:'assistant',content:'请求失败：'+e.message})}
-  tgt.ts=Date.now();saveHist();busy=false;refreshGo();if(conv===tgt)render()}
+  tgt.ts=Date.now();saveHist();busy=false;refreshGo();if(conv===tgt){render();const cp=parse(tgt.msgs.at(-1).content).filter(p=>p.k==='code').pop();if(cp)showPreview(cp)}}
 function saveHist(){try{LS.setItem('convs',JSON.stringify(convs))}catch{try{LS.setItem('convs',JSON.stringify(convs.map(c=>({...c,msgs:c.msgs.map(m=>m.att?{...m,att:m.att.map(a=>({k:a.k,n:a.n}))}:m)}))))}catch{}}if(conv)LS.setItem('cur',conv.id)}
 let convs=load('convs',null);
 if(!convs){const old=load('hist',[]);convs=old.length?[{id:'c'+Date.now(),title:(old[0].content||'对话').slice(0,24),msgs:old,ts:Date.now()}]:[]}
-let conv=convs.find(c=>c.id===LS.getItem('cur'))||convs[0]||null;hist=conv?conv.msgs:[];
+let conv=convs.find(c=>c.id===LS.getItem('cur'))||convs[0]||null;hist=conv?conv.msgs:[];convs.forEach(c=>{if(!c.mode&&c.msgs.length)c.mode='persona'});
+function pickMode(k){if(!conv)newConv();conv.mode=k;saveHist();render()}
 function newConv(){conv={id:'c'+Date.now(),title:'新对话',msgs:[],ts:Date.now()};convs.unshift(conv);hist=conv.msgs;LS.setItem('cur',conv.id)}
 function toApi(m){if(m.role!=='user'||!m.att||!m.att.length)return{role:m.role,content:m.content};
-  const tx=m.att.filter(a=>a.k==='txt'&&a.text).map(a=>`\n\n【附件：${a.n}】\n${a.text.slice(0,20000)}`).join(''),im=m.att.filter(a=>a.k==='img'&&a.url);
+  const tx=m.att.filter(a=>a.k==='txt'&&a.text).map(a=>`\n\n【附件：${a.n}】\n${a.text.slice(0,60000)}`).join(''),im=m.att.filter(a=>a.k==='img'&&a.url);
   if(!im.length)return{role:'user',content:m.content+tx};
   return{role:'user',content:[{type:'text',text:(m.content+tx)||'请看图片'},...im.map(a=>({type:'image_url',image_url:{url:a.url}}))]}}
 
+$('#msgs').addEventListener('click',async e=>{const b=e.target.closest('.act button');if(!b)return;
+  if(b.dataset.rt){if(busy||!conv||conv.msgs.at(-1)?.role!=='assistant')return;
+    if(!cfg.url||!cfg.key||!cfg.model){toast('请先在 API 设置中保存配置');return open('api')}
+    conv.msgs.pop();busy=true;refreshGo();render();gen(conv);return}
+  const m=hist[+b.dataset.cp];if(!m)return;
+  try{await navigator.clipboard.writeText(m.content.replace(/<\/?(txt|code)[^>]*>/g,'').trim());const o=b.innerHTML;b.innerHTML=CHK;setTimeout(()=>b.innerHTML=o,1200)}catch{toast('复制失败')}});
 /* attachments / model / voice */
 let pending=[];
 function refreshGo(){$('#go').disabled=busy||(!inp.value.trim()&&!pending.length)}
@@ -412,12 +504,19 @@ $('#mic').onclick=()=>{const SR=window.SpeechRecognition||window.webkitSpeechRec
   rec.start();lis=true;$('#mic').classList.add('rec')};
 /* drawer */
 function renderDrawer(){const l=[...convs].sort((a,b)=>b.ts-a.ts);
-  $('#dlist').innerHTML=l.length?l.map(c=>`<div class="di${conv&&c.id===conv.id?' sel':''}" data-c="${c.id}"><span class="ct">${esc(c.title||'新对话')}</span><b class="x" data-x="${c.id}">✕</b></div>`).join(''):'<p class="hint" style="padding:12px 14px">还没有对话</p>'}
+  $('#dlist').innerHTML=l.length?l.map(c=>`<div class="dw"><button class="dd" data-x="${c.id}">删除</button><div class="di dwi${conv&&c.id===conv.id?' sel':''}" data-c="${c.id}"><span class="ct">${esc(c.title||'新对话')}</span>${c.mode?`<span class="mt">${MODES[c.mode].n}</span>`:''}</div></div>`).join(''):'<p class="hint" style="padding:12px 14px">还没有对话</p>'}
 $('#menu').onclick=()=>{renderDrawer();$('#drawer').classList.add('on')};
 $('#dhome').onclick=()=>{$('#drawer').classList.remove('on');document.querySelectorAll('.win').forEach(w=>w.classList.remove('on'))};
-$('#dlist').onclick=e=>{const x=e.target.closest('[data-x]'),c=e.target.closest('[data-c]');if(!c)return;
-  if(x){if(!confirm('删除这个对话？'))return;convs=convs.filter(v=>v.id!==x.dataset.x);if(conv&&conv.id===x.dataset.x){conv=null;hist=[];LS.removeItem('cur')}
-    saveHist();try{LS.setItem('convs',JSON.stringify(convs))}catch{}renderDrawer();render();return}
+let sw=null,lastSw=0;const dl=$('#dlist');
+const closeSw=ex=>document.querySelectorAll('.dwi.open').forEach(x=>{if(x!==ex){x.classList.remove('open');x.style.transform=''}});
+dl.addEventListener('pointerdown',e=>{const it=e.target.closest('.dwi');if(!it)return;closeSw(it);sw={it,x:e.clientX,y:e.clientY,b:it.classList.contains('open')?-80:0,m:0,dx:0}});
+dl.addEventListener('pointermove',e=>{if(!sw)return;const dx=e.clientX-sw.x;if(!sw.m){if(Math.abs(dx)>8&&Math.abs(dx)>Math.abs(e.clientY-sw.y)){sw.m=1;sw.it.style.transition='none'}else return}
+  sw.dx=Math.max(-80,Math.min(0,sw.b+dx));sw.it.style.transform=`translateX(${sw.dx}px)`});
+const swEnd=()=>{if(!sw)return;const s=sw;sw=null;if(!s.m)return;lastSw=Date.now();const o=s.dx<-40;s.it.style.transition='';s.it.classList.toggle('open',o);s.it.style.transform=o?'translateX(-80px)':''};
+dl.addEventListener('pointerup',swEnd);dl.addEventListener('pointercancel',swEnd);
+dl.onclick=e=>{if(Date.now()-lastSw<300)return;const x=e.target.closest('[data-x]'),c=e.target.closest('[data-c]');
+  if(x){const id=x.dataset.x;convs=convs.filter(v=>v.id!==id);if(conv&&conv.id===id){conv=null;hist=[];LS.removeItem('cur')}saveHist();renderDrawer();render();return}
+  if(!c)return;if(c.classList.contains('open')){closeSw();return}
   conv=convs.find(v=>v.id===c.dataset.c);hist=conv.msgs;LS.setItem('cur',conv.id);$('#drawer').classList.remove('on');render()};
 
 /* appearance */
@@ -428,19 +527,19 @@ const IC={api:SV+'<path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="
  look:SV+'<circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="11" r="1.1" fill="#fff"/><circle cx="12" cy="7.8" r="1.1" fill="#fff"/><circle cx="15.5" cy="11" r="1.1" fill="#fff"/><path d="M12 21c-2 0-2-2-1-3s1-2-1-2.5"/></svg>'};
 const APPS=[{id:'api',n:'API 设置',bg:G[0]},{id:'chat',n:'对话',bg:G[1]},{id:'card',n:'测卡',bg:G[3]},{id:'arc',n:'存档',bg:G[2]},{id:'wb',n:'世界书',bg:G[4]},{id:'look',n:'外观',bg:G[4]}];
 let theme=load('theme',{wall:null,icons:{}});theme.icons=theme.icons||{};
-const DEFW='radial-gradient(120% 70% at 15% 0%,#6b4a3a 0%,transparent 60%),radial-gradient(90% 60% at 100% 35%,#2f3f52 0%,transparent 60%),radial-gradient(100% 80% at 40% 110%,#8c5a3c 0%,transparent 55%),#1a1512';
+const DEFW='#f4f4f4';
 const wallCSS=()=>theme.wall&&theme.wall.img?`linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.3)),url(${theme.wall.img}) center/cover`:'';
 function iconHTML(id){const a=APPS.find(x=>x.id===id),c=theme.icons[id];
   if(c&&c.img)return `<div class="ic" style="background:url(${c.img}) center/cover"></div>`;
   return `<div class="ic gl">${IC[id]}</div>`}
 function renderHome(){
   $('#grid').innerHTML=APPS.map(a=>`<button class="app" data-open="${a.id}">${iconHTML(a.id)}${a.n}</button>`).join('');
-  $('#dock').innerHTML=['chat','card','arc','api'].map(id=>`<button class="app" data-open="${id}">${iconHTML(id)}</button>`).join('');
-  $('#home').style.background=wallCSS()}
+  $('#home').style.background=wallCSS();$('#home').classList.toggle('dk',!!wallCSS());$('#home').style.color=theme.tc||''}
 function renderLook(){const w=wallCSS();
   $('#look').innerHTML=`<h2>外观</h2><p class="d">自定义主屏幕壁纸和应用图标，随时可以恢复默认。</p>
   <label>主屏幕壁纸</label><div class="crd"><div class="row" style="align-items:center"><div class="wp" style="background:${w||DEFW}"></div><div style="flex:1;font-size:14px;color:var(--sub)">${w?'自定义壁纸':'默认壁纸'}</div></div>
   <div class="row" style="margin-top:12px"><button class="btn ghost" style="flex:1" data-act="wup">更换壁纸</button><button class="btn ghost" style="flex:1" data-act="wrs">恢复默认</button></div></div>
+  <label>主屏幕文字颜色</label><div class="crd"><div class="swrow">${[['',''],['#2b2b2b',''],['#ffffff',''],['#8a8379',''],['#c4673f',''],['#4a5d78','']].map(([c])=>`<button class="sw${(theme.tc||'')===c?' sel':''}" data-tc="${c}" style="background:${c||'#efefef'};font-size:12px">${c?'':'默认'}</button>`).join('')}<input type="color" id="tcin" class="sw" value="${theme.tc||'#2b2b2b'}" style="padding:0;background:none"></div><div id="tcp" style="margin-top:12px;font-size:15px;font-weight:600;color:${theme.tc||'#2b2b2b'}">主屏幕文字预览 12:30</div></div>
   <label>应用图标</label>${APPS.map(a=>`<div class="crd"><div class="row" style="align-items:center">${iconHTML(a.id)}<b style="flex:1;font-size:15px">${a.n}</b><button class="chip" data-iu="${a.id}">更换</button><button class="chip" data-ir="${a.id}" style="margin-left:8px">恢复默认</button></div></div>`).join('')}
   <button class="btn full" style="background:var(--ink)" data-act="rall">全部恢复默认</button>`}
 function saveTheme(){try{LS.setItem('theme',JSON.stringify(theme))}catch{toast('图片太大，存储空间不足')}renderHome();renderLook()}
@@ -448,12 +547,15 @@ function pick(max,sq,cb){const i=document.createElement('input');i.type='file';i
   i.addEventListener('cancel',()=>i.remove());
   i.onchange=async()=>{const f=i.files[0];i.remove();if(!f)return;try{cb(await readImg(f,max,sq))}catch(e){toast('图片读取失败：'+(e.message||'未知错误'))}};i.click()}
 $('#look').onclick=e=>{const t=e.target.closest('button');if(!t)return;const d=t.dataset;
-  if(d.act==='wup')pick(1400,false,u=>{theme.wall={img:u};saveTheme()});
+  if(d.tc!==undefined){theme.tc=d.tc||null;saveTheme();toast(d.tc?'已更改文字颜色':'已恢复默认文字颜色')}
+  else if(d.act==='wup')pick(1400,false,u=>{theme.wall={img:u};saveTheme()});
   else if(d.act==='wrs'){theme.wall=null;saveTheme();toast('已恢复默认壁纸')}
   else if(d.iu)pick(256,true,u=>{theme.icons[d.iu]={img:u};saveTheme()});
   else if(d.ir){delete theme.icons[d.ir];saveTheme();toast('已恢复默认图标')}
   else if(d.act==='rall'){theme={wall:null,icons:{}};saveTheme();toast('已全部恢复默认')}};
 
+$('#look').addEventListener('input',e=>{if(e.target.id!=='tcin')return;theme.tc=e.target.value;$('#home').style.color=theme.tc;const p=$('#tcp');if(p)p.style.color=theme.tc;try{LS.setItem('theme',JSON.stringify(theme))}catch{}});
+$('#look').addEventListener('change',e=>{if(e.target.id==='tcin')renderLook()});
 /* ===== 测卡 ===== */
 IC.card=SV+'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>';
 let cards=load('cards',{chars:[],users:[],au:null}),ctab='msg',ccur=null,cbusy=false,ed=null;
@@ -468,7 +570,7 @@ function av(o,cls){const n=[...(o.name||'?')],col=COLS[n.reduce((a,c)=>a+c.charC
 function fmt(ts){if(!ts)return'';const d=new Date(ts),p=n=>String(n).padStart(2,'0');return d.toDateString()===new Date().toDateString()?p(d.getHours())+':'+p(d.getMinutes()):(d.getMonth()+1)+'/'+d.getDate()}
 const emptyH=(a,b)=>`<div class="empty" style="padding-top:14vh"><h2 style="font-size:22px">${a}</h2><p>${b}</p></div>`;
 function cardRender(){
-  $('#ctitle').textContent={msg:'消息',role:'角色',me:'我的人设'}[ctab];
+  $('#ctitle').textContent={msg:'消息',role:'角色',me:'我的人设'}[ctab];$('#ctitle').dataset.en={msg:'CHATS',role:'ROLES',me:'PROFILE'}[ctab];
   document.querySelectorAll('#ctabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===ctab));
   let h='';
   if(ctab==='msg'){const l=[...cards.chars].sort((a,b)=>Math.max(b.ct||0,(b.msgs.at(-1)||{}).ts||0)-Math.max(a.ct||0,(a.msgs.at(-1)||{}).ts||0));
@@ -501,16 +603,33 @@ $('#edel').onclick=()=>{if(!confirm('确定删除？'))return;
   saveCards();$('#esheet').classList.remove('on');cardRender()};
 /* conversation */
 function openChat(id){ccur=id;$('#cchat').classList.add('on');cconv()}
-function cconv(){const c=cur();if(!c)return;$('#cname').textContent=c.name;$('#cstat').textContent=cbusy?'对方正在输入…':'';const u=meU();
-  $('#cmsgs').innerHTML=c.msgs.length?c.msgs.map(m=>`<div class="cm ${m.r}">${m.r==='u'?'':av(c)}<div class="cb">${esc(m.t)}</div>${m.r==='u'?av(u):''}</div>`).join(''):`<p class="hint" style="text-align:center;margin-top:30px">已进入测试对话，和「${esc(c.name)}」打个招呼吧</p>`;
-  requestAnimationFrame(()=>{const sc=$('#cscroll');sc.scrollTop=sc.scrollHeight})}
+function cconv(){const c=cur();if(!c)return;const bh=cbusy&&cbid===c.id;$('#cname').textContent=c.name;$('#cstat').textContent=bh?'对方正在输入…':'';const u=meU();
+  $('#cmsgs').innerHTML=(c.msgs.length||bh)?c.msgs.map((m,i)=>`<div class="cm ${m.r}">${m.r==='u'?'':av(c)}<div class="cb"${m.r==='a'&&i===c.msgs.length-1?' data-last="1"':''}>${esc(m.t)}</div>${m.r==='u'?av(u):''}</div>`).join('')+(bh?`<div class="cm a">${av(c)}<div class="cb"><span class="dots"><i></i><i></i><i></i></span></div></div>`:''):`<p class="hint" style="text-align:center;margin-top:30px">已进入测试对话，和「${esc(c.name)}」打个招呼吧</p>`;
+  requestAnimationFrame(()=>{const sc=$('#cscroll');sc.scrollTop=sc.scrollHeight});cbtn()}
 $('#cback').onclick=()=>{$('#cchat').classList.remove('on');ccur=null;cardRender()};
-const cin=$('#cin');cin.oninput=()=>{cin.style.height='auto';cin.style.height=Math.min(cin.scrollHeight,120)+'px';$('#csend').disabled=!cin.value.trim()||cbusy};
+const cin=$('#cin');cin.oninput=()=>{cin.style.height='auto';cin.style.height=Math.min(cin.scrollHeight,120)+'px';cbtn()};
 $('#csend').onclick=csend;
-async function csend(){const c=cur(),t=cin.value.trim();if(!c||!t||cbusy)return;
+function csend(){const c=cur(),t=cin.value.trim();if(!c||!t||cbusy)return;
+  c.msgs.push({r:'u',t,ts:Date.now()});cin.value='';cin.style.height='auto';saveCards();cconv();cin.oninput()}
+let cbid=null;$('#cheart').onclick=cgen;
+async function cgen(){const c=cur();if(!c||cbusy||c.msgs.at(-1)?.r!=='u')return;
   if(!cfg.url||!cfg.key||!cfg.model){toast('请先在 API 设置中保存配置');return open('api')}
-  c.msgs.push({r:'u',t,ts:Date.now()});cin.value='';cin.style.height='auto';cbusy=true;$('#csend').disabled=true;saveCards();cconv();
-  const u=meU(),wbs=(c.wb||[]).map(id=>worlds.find(w=>w.id===id)).filter(Boolean),wtxt=wbs.length?'\n\n【世界书（世界观与背景设定，请严格遵循）】\n'+wbs.map(w=>'《'+w.name+'》\n'+w.content).join('\n\n'):'',sys=`你正在和用户进行即时通讯聊天，请完全扮演角色「${c.name}」。${wtxt}\n\n【角色人设】\n${c.persona||'（暂无）'}\n\n【对方（用户）的人设】\n名字：${u.name}\n${u.persona||'（无）'}\n\n要求：始终以角色的身份、语气和口吻回复，保持人设一致；像发微信一样把回复拆成几条简短消息，每条消息单独占一行；不要跳出角色，不要解释你是AI。`;
+  cbusy=true;cbid=c.id;cconv();
+  const u=meU(),wbs=(c.wb||[]).map(id=>worlds.find(w=>w.id===id)).filter(Boolean),wtxt=wbs.length?'\n\n【世界书（世界观与背景设定，请严格遵循）】\n'+wbs.map(w=>'《'+w.name+'》\n'+w.content).join('\n\n'):'',sys=`现在你和对方正在手机上进行线上聊天（像微信、QQ 这样的即时通讯），你完全扮演角色「${c.name}」。当前时间：${new Date().toLocaleString('zh-CN',{hour12:false})}。${wtxt}
+
+【角色人设】
+${c.persona||'（暂无）'}
+
+【对方（用户）的人设】
+名字：${u.name}
+${u.persona||'（无）'}
+
+【聊天要求】
+1. 这是线上聊天，不是面对面，也不是写小说。要有活人感、日常化：口语化，像真人打字，可以有语气词、省略、口癖、偶尔的错字或emoji，会接话、反问、吐槽、开玩笑，有自己的情绪和小脾气，不要每句都完美周全。
+2. 把回复拆成 2-6 条简短消息，每条消息单独占一行，一行就是一个聊天气泡；每条通常一两句话，不要长篇大论，不要列清单，不要小标题。
+3. 对方可能连发了好几条消息才让你回复，请结合这些消息自然地回应，不必逐条回答。
+4. 不要写括号里的动作、神态、心理或旁白（如“（笑）”“*摸头*”），只写你会发出去的聊天内容。
+5. 始终保持人设一致，贴合当下时间和情境聊日常，不要跳出角色，不要解释你是AI。`;
   const hs=[];for(const m of c.msgs.filter(m=>!m.err).slice(-40)){const r=m.r==='u'?'user':'assistant';if(hs.length&&hs.at(-1).role===r)hs.at(-1).content+='\n'+m.t;else hs.push({role:r,content:m.t})}
   try{const r=await fetch(cfg.url+'/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+cfg.key},body:JSON.stringify({model:cfg.model,messages:[{role:'system',content:sys},...hs]})});
     if(!r.ok)throw new Error('HTTP '+r.status+' '+(await r.text()).slice(0,100));
@@ -525,13 +644,22 @@ $('#cmb').onclick=e=>{const t=e.target.closest('.di');if(!t)return;const c=cur()
   if(t.dataset.su){cards.au=t.dataset.su;saveCards();$('#csheet').classList.remove('on');cconv()}
   else if(t.dataset.a==='edit'){$('#csheet').classList.remove('on');openEd('char',c.id)}
   else if(t.dataset.a==='clear'&&confirm('清空与「'+c.name+'」的聊天记录？')){c.msgs=[];saveCards();$('#csheet').classList.remove('on');cconv()}};
+function cbtn(){const c=cur();$('#csend').disabled=!cin.value.trim()||cbusy;const h=$('#cheart');h.disabled=cbusy||!c||c.msgs.at(-1)?.r!=='u';h.classList.toggle('on',cbusy&&!!c&&cbid===c.id)}
+/* long press latest bubble */
+let lp=null,lpx=0,lpy=0;const cm=$('#cmsgs');
+cm.addEventListener('pointerdown',e=>{const b=e.target.closest('.cb[data-last]');if(!b)return;lpx=e.clientX;lpy=e.clientY;clearTimeout(lp);lp=setTimeout(()=>{lp=null;$('#rsheet').classList.add('on')},500)});
+cm.addEventListener('pointermove',e=>{if(lp&&Math.hypot(e.clientX-lpx,e.clientY-lpy)>8){clearTimeout(lp);lp=null}});
+['pointerup','pointercancel','pointerleave'].forEach(t=>cm.addEventListener(t,()=>{clearTimeout(lp);lp=null}));
+cm.addEventListener('contextmenu',e=>e.preventDefault());
+$('#rregen').onclick=()=>{$('#rsheet').classList.remove('on');const c=cur();if(!c||cbusy)return;while(c.msgs.length&&c.msgs.at(-1).r==='a')c.msgs.pop();saveCards();cconv();cgen()};
+$('#rcopy').onclick=async()=>{$('#rsheet').classList.remove('on');const c=cur(),m=c&&c.msgs.at(-1);if(!m)return;try{await navigator.clipboard.writeText(m.t);toast('已复制')}catch{toast('复制失败')}};
 /* import from chat doc */
 function importCard(doc){const txt=doc.c.trim();
   let name=((txt.match(/(?:姓名|名字|角色名|名称|Name)\s*[:：]\s*([^\n\r（(，,]{1,20})/i)||[])[1]||doc.n.replace(/\.[^.]+$/,'').replace(/[-_—\s]*(人设|设定|角色卡|人物设定).*$/i,'')||'新角色').trim();
   let c=cards.chars.find(x=>x.persona===txt);
   if(c)toast('这个人设已导入过，已为你打开');else{c={id:uid(),name,avatar:'',persona:txt,msgs:[],ct:Date.now()};cards.chars.push(c);saveCards();toast('已创建角色「'+name+'」')}
   $('#sheet').classList.remove('on');ctab='msg';open('card');openChat(c.id)}
-$('#imp').onclick=()=>importCard(curDoc);
+$('#imp').onclick=()=>importCard(curDoc);$('#impw').onclick=()=>importWb(curDoc);
 /* ===== 世界书 ===== */
 IC.wb=SV+'<path d="M4 5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2z"/><path d="M4 20a2 2 0 0 0 2 2h13v-4M9 8h6"/></svg>';
 let worlds=load('worlds',[]),wed=null;
@@ -579,6 +707,22 @@ function archiveDoc(p){if(arch.some(a=>a.n===p.n&&a.c===p.c))return toast('已�
 function archRender(){$('#abody').innerHTML=arch.length?arch.map(a=>`<div class="cr" data-a="${a.id}"><div class="fi">${ICON_FILE}</div><div class="mid"><b>${esc(a.n)}</b><span>${esc(a.c.replace(/\s+/g,' ').slice(0,40))}</span></div><em>${fmt(a.ts)} · ${a.c.length}字</em></div>`).join(''):emptyH('还没有存档','在对话里点文档卡片上的“存档”，<br>就会收进这里')}
 $('#abody').onclick=e=>{const t=e.target.closest('[data-a]');const a=t&&arch.find(x=>x.id===t.dataset.a);if(a)showDoc({n:a.n,c:a.c,aid:a.id})};
 $('#arcb').onclick=()=>{if(curDoc.aid){if(!confirm('从存档中删除？'))return;arch=arch.filter(a=>a.id!==curDoc.aid);saveArch();archRender();$('#sheet').classList.remove('on');toast('已删除')}else archiveDoc(curDoc)};
+
+function importWb(doc){const txt=doc.c.trim();
+  const name=((txt.match(/(?:名称|书名|世界书名|世界名|Name)\s*[:：]\s*([^\n\r（(，,]{1,24})/i)||[])[1]||doc.n.replace(/\.[^.]+$/,'').replace(/[-_—\s]*(世界书|世界观|设定).*$/i,'')||'新世界书').trim();
+  let w=worlds.find(x=>x.content===txt);
+  if(w)toast('这本世界书已导入过，已为你打开');else{w={id:uid(),name,content:txt,ts:Date.now()};worlds.unshift(w);saveWorlds();toast('已创建世界书「'+name+'」')}
+  $('#sheet').classList.remove('on');open('wb');openW(w.id)}
+/* ===== 界面预览 ===== */
+let curV=null;
+const wrapH=c=>/<html|<!doctype/i.test(c)?c:'<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>'+c+'</body></html>';
+function setV(k){document.querySelectorAll('[data-v]').forEach(b=>b.classList.toggle('sel',b.dataset.v===k));$('#vf').style.display=k==='pv'?'':'none';$('#vsrc').style.display=k==='src'?'block':'none'}
+function showPreview(p){curV=p;$('#vn').textContent=p.n;$('#varc').textContent=p.aid?'删除存档':'存档';$('#vsrc').textContent=p.c;$('#vf').srcdoc=wrapH(p.c);setV('pv');$('#vsheet').classList.add('on')}
+document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>setV(b.dataset.v));
+$('#vx').onclick=()=>{$('#vsheet').classList.remove('on');$('#vf').srcdoc=''};
+$('#vcp').onclick=async()=>{try{await navigator.clipboard.writeText(curV.c);toast('已复制代码')}catch{toast('复制失败，请到“源码”里长按复制')}};
+$('#vdl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([curV.c],{type:'text/html;charset=utf-8'}));a.download=/\.html?$/i.test(curV.n)?curV.n:curV.n+'.html';document.body.appendChild(a);a.click();a.remove();toast('已保存')};
+$('#varc').onclick=()=>{if(curV.aid){if(!confirm('从存档中删除？'))return;arch=arch.filter(a=>a.id!==curV.aid);saveArch();archRender();$('#vsheet').classList.remove('on');toast('已删除')}else archiveDoc(curV)};
 
 cardRender();
 renderHome();renderLook();updModel();renderAtt();render();
