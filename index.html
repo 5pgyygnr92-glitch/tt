@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#f6f6f6">
 <title>Atelier</title>
 <style>
@@ -218,6 +218,13 @@ label{font-size:11px;letter-spacing:2px;font-weight:500;color:#a3a3a3}
 .csb{background:var(--ink);border-radius:99px}
 .cb{background:var(--card);border-radius:20px 20px 20px 6px}
 .cm.u .cb{background:var(--ink);color:#fff;border-radius:20px 20px 6px 20px}
+
+/* ===== 全屏沉浸 + 修复 iOS 顶部模糊 ===== */
+html,body{position:relative;width:100%;height:100lvh;min-height:100lvh;overflow:hidden;background:var(--cream)}
+#home,.win,.sheet,.toast{position:absolute}
+#home,.win,.sheet{top:0;left:0;right:0;height:100lvh}
+.glass,.hd,.sh,.tb,.sub,.dp{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.sh,.tb{background:var(--cream)}
 </style>
 </head>
 <body>
